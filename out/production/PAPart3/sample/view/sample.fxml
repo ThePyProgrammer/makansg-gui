@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="631.0" style="-fx-background-image: url(&quot;https://www.itl.cat/pngfile/big/10-103219_food-wallpaper-desktop-wallpaper-food-minimalist.jpg&quot;);" stylesheets="@sample.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
+   <children>
+      <VBox alignment="CENTER" layoutX="-1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="124.0" prefWidth="631.0" style="-fx-background-color: #008066;">
+         <children>
+            <ImageView fitHeight="77.0" fitWidth="139.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../LOGO.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" prefHeight="29.0" prefWidth="427.0" text="Your favourite restaurants and takeaways, delivered straight to your door" textFill="#ffbe7d">
+               <font>
+                  <Font name="Corbel Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="14.0" layoutY="129.0" prefHeight="366.0" prefWidth="191.0" style="-fx-background-color: rgba(100%, 100%, 100%, 0.6);">
+         <children>
+            <Label fx:id="loginLabel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="86.0" text="Login below:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="username" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="218.0" promptText="Username">
+               <tooltip>
+                  <Tooltip text="Enter your username here, e.g. Tony Stark, James Bond, Kevin Smith etc.">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </TextField>
+            <PasswordField fx:id="password" prefHeight="29.0" prefWidth="171.0" promptText="Password">
+               <tooltip>
+                  <Tooltip text="Enter your super-secret password here.">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </PasswordField>
+            <Button fx:id="log" alignment="CENTER" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="93.0" text="Login" textAlignment="RIGHT" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="80.0" />
+               </VBox.margin>
+            </Button>
+            <Label id="visiblechange" fx:id="shoppingLabel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="129.0" stylesheets="@sample.css" text="Your Shopping Cart:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextArea id="visiblechange" fx:id="shopping" editable="false" prefHeight="111.0" prefWidth="224.0" promptText="Your Shopping Cart is currently empty!" stylesheets="@sample.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </TextArea>
+            <Button id="visiblechange" fx:id="checkout" alignment="CENTER" mnemonicParsing="false" onAction="#doCheckout" prefHeight="25.0" prefWidth="93.0" stylesheets="@sample.css" text="Checkout" textAlignment="RIGHT" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="80.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="visiblechange" fx:id="clear" alignment="CENTER" mnemonicParsing="false" onAction="#clearIt" prefHeight="25.0" prefWidth="158.0" stylesheets="@sample.css" text="Clear Shopping Cart" textAlignment="RIGHT" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="15.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="211.0" layoutY="129.0" prefHeight="366.0" prefWidth="409.0" style="-fx-background-color: rgba(100%, 100%, 100%, 0.6);" stylesheets="@sample.css">
+         <children>
+            <Label id="visiblechange" fx:id="postalLabel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="331.0" stylesheets="@sample.css" text="Enter a Postal Code to search for yummy delicious food:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <FlowPane prefHeight="16.0" prefWidth="377.0">
+               <children>
+                  <TextField id="visiblechange" fx:id="postalField" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="218.0" promptText="Postal Code" stylesheets="@sample.css">
+                     <FlowPane.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </FlowPane.margin>
+                  </TextField>
+                  <Button id="visiblechange" fx:id="search" alignment="CENTER" mnemonicParsing="false" onAction="#setPostal" prefHeight="25.0" prefWidth="93.0" stylesheets="@sample.css" text="Search" textAlignment="RIGHT" textFill="WHITE">
+                     <FlowPane.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </FlowPane.margin>
+                  </Button>
+               </children>
+            </FlowPane>
+            <Label id="visiblechange" fx:id="itemsLabel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="289.0" stylesheets="@sample.css" text="Below are the food items available in your area!">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextArea id="visiblechange" fx:id="items" editable="false" prefHeight="203.0" prefWidth="357.0" promptText="Enter Postal Code first!" stylesheets="@sample.css" wrapText="true">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </TextArea>
+            <FlowPane prefHeight="35.0" prefWidth="357.0">
+               <children>
+                  <Label id="visiblechange" fx:id="itemLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="99.0" stylesheets="@sample.css" text="Enter food item: ">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField id="visiblechange" fx:id="food" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="123.0" promptText="Food Item" stylesheets="@sample.css" />
+                  <Button id="visiblechange" fx:id="addBtn" alignment="CENTER" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="53.0" stylesheets="@sample.css" text="Add" textAlignment="RIGHT" textFill="WHITE">
+                     <FlowPane.margin>
+                        <Insets left="5.0" />
+                     </FlowPane.margin>
+                  </Button>
+                  <Button id="visiblechange" fx:id="removeBtn" alignment="CENTER" mnemonicParsing="false" onAction="#remove" prefHeight="25.0" prefWidth="71.0" stylesheets="@sample.css" text="Remove" textAlignment="RIGHT" textFill="WHITE">
+                     <FlowPane.margin>
+                        <Insets left="5.0" />
+                     </FlowPane.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </FlowPane>
+            <FlowPane prefHeight="27.0" prefWidth="377.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="229.0" text="© NUS High School of Math and Science" />
+                  <Hyperlink fx:id="aboutBtn" alignment="CENTER_RIGHT" contentDisplay="RIGHT" onAction="#about" prefHeight="23.0" prefWidth="175.0" text="About the Programmer" />
+               </children>
+            </FlowPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

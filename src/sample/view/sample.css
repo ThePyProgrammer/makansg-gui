@@ -1,0 +1,13 @@
+.root {
+  -fx-background-image: url("https://www.itl.cat/pngfile/big/10-103219_food-wallpaper-desktop-wallpaper-food-minimalist.jpg");
+  background-attachment: fixed;
+}
+#visiblechange {
+  visibility: hidden;
+}
+.button {
+  -fx-background-color: #ff8000
+}
+.button:hover {
+  -fx-background-color: #000;
+}
